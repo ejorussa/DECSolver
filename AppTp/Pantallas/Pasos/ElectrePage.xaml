@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppTp.Pantallas.Pasos.ElectrePage"
+            BarBackgroundColor="#135D66">
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Text="Generar Excel" Clicked="ToolbarItem_Clicked"/>
+    </TabbedPage.ToolbarItems>
+    <ContentPage Title="Paso 1" BackgroundColor="#E3FEF7">
+        <ScrollView HorizontalScrollBarVisibility="Always" Orientation="Both">
+            <StackLayout x:Name="PantallaPaso1">
+                <Label Margin="5,10,0,0" FontSize="16">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Paso 1: " FontAttributes="Bold"/>
+                            <Span Text="Normalizo"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+
+    <ContentPage Title="Paso 2" BackgroundColor="#E3FEF7">
+        <ScrollView HorizontalScrollBarVisibility="Always" Orientation="Both">
+            <StackLayout x:Name="PantallaPaso2">
+                <Label Margin="5,10,0,0" FontSize="16">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Paso 2: " FontAttributes="Bold"/>
+                            <Span Text="Calculo Indices de concor y discor"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Grid x:Name="GridNormalizado"
+                Padding="10"
+                RowSpacing="0"
+                ColumnSpacing="0">
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+    <ContentPage Title="Paso 3" BackgroundColor="#E3FEF7">
+        <ScrollView HorizontalScrollBarVisibility="Always" Orientation="Both">
+            <StackLayout>
+                <Label Margin="5,10,0,0" FontSize="16">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Paso 2: " FontAttributes="Bold"/>
+                            <Span Text="Calculo Indices de concor y discor"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                
+                <Grid x:Name="GridSupe"
+        Padding="10"
+        RowSpacing="0"
+        ColumnSpacing="0">
+                </Grid>
+
+                <Entry x:Name="c1" Placeholder="ci" Margin="5,5,5,5"/>
+                <Entry x:Name="d1" Placeholder="di" Margin="5,5,5,5"/>
+                <Button Clicked="Button_Clicked" Text="Resolver" BackgroundColor="#135D66" Margin="5,5,5,5"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+    <ContentPage Title="Grafico" BackgroundColor="#E3FEF7">
+        <ScrollView HorizontalScrollBarVisibility="Always" Orientation="Both" WidthRequest="400" HeightRequest="350" VerticalOptions="Start">
+            <GraphicsView x:Name="graphView"
+                          VerticalOptions="Fill"
+                          HorizontalOptions="Fill"
+                          HeightRequest="300" 
+                          WidthRequest="300"
+                          />
+            
+        </ScrollView>
+
+    </ContentPage>
+</TabbedPage>
